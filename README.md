@@ -21,6 +21,9 @@ In order to compile the source files, the build path must contain the hadoop-com
 hadoop-hdfs-<version>.jar, and hadoop-mapreduce-client-core-<version>.jar libraries, which we have included in the
 HadoopJars directory.
 
+Please note that we have included a precompiled jar in the MapReduce/bin/ directory. You will only need to compile
+if you would like to make modifications.
+
 --------
 Running
 --------
@@ -30,8 +33,8 @@ to the S3 filesystem prior to running.
 
 To run the jar, find a running EMR cluster or create a new one, and ensure that the cluster is using the Amazon Hadoop
 distribution marked as "latest" (this was "2.4.2 (Hadoop 1.0.3) - latest" during our development). Add a custom jar
-step and point it to the distributed EM jar. The arguments are described in the EMDriver.java javadoc, but are repeated
-here for conevenience:
+step and point it to the distributed EM jar (which can be found pre-compiled in the MapReduce/bin/ directory). 
+The arguments are described in the EMDriver.java javadoc, but are repeated here for conevenience:
 
 Arguments:
 
