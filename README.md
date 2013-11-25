@@ -1,6 +1,8 @@
 Distributed Expectation Maximization
 ========================
 
+<a href="www.google.com"> hi </a>
+
 Jake Leichtling '14
 
 Derek Salama '14
