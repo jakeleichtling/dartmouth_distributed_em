@@ -1,10 +1,13 @@
-dartmouth_distributed_em
+Distributed Expectation Maximization
 ========================
+
 Jake Leichtling '14
+
 Derek Salama '14
+
 Computational Linguistics (COSC 73), Fall 2013
+
 Professor Sravana Reddy
-========================
 
 The MapReduce directory contains the principle output of our project, i.e. a distributed expectation maximization
 program to estimate hidden markov model parameters. The source code can be found in the src directory, with corresponding
@@ -43,3 +46,20 @@ Arguments:
 7: Max number of EM iterations, or -1 for no maximum, e.g. "10"
 8: Number of different random seeds for model parameters, e.g. "5"
 9: Flag to enable Viterbi tagging following EM, e.g. a nonzero int (e.g. "1" or "-1") to enable and "0" to disable
+
+--------------
+Documentation
+--------------
+The javadoc documentation for the source code can be found in the MapRedue/doc directory. This documentation can be
+opened for easy consumption by opening the index.html file in your favorite web browser.
+
+Additionally, our project writeup FinalWriteup.pdf is located in the root directory.
+
+----------
+Conclusion
+----------
+We hope you find this program useful for speeding up your expectation maximization endeavours! Please email us
+with any questions.
+
+jake.leichtling@gmail.com
+dereksalama@gmail.com
