@@ -1,8 +1,6 @@
 Distributed Expectation Maximization
 ========================
 
-<a href="www.google.com"> hi </a>
-
 Jake Leichtling '14
 
 Derek Salama '14
@@ -15,6 +13,10 @@ The MapReduce directory contains the principle output of our project, i.e. a dis
 program to estimate hidden markov model parameters. The source code can be found in the src directory, with corresponding
 documenation in the doc directory. The bin directory contains the program jar, which has been compiled from the source
 files linked with Hadoop version 2.2.0.
+
+----------------------------
+<a href="blob/master/MapReduce/doc/index.html">Documentation</a>
+----------------------------
 
 ----------
 Compiling
