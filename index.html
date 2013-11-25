@@ -1,79 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Distributed Expectation Maximization : A distributed expectation maximization program to be run on Amazon Elastic MapReduce." />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Distributed Expectation Maximization by jakeleichtling</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Distributed Expectation Maximization</title>
   </head>
-
   <body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/jakeleichtling/dartmouth_distributed_em">View on GitHub</a>
+      <header>
+        <h1>Distributed Expectation Maximization</h1>
+        <p>A distributed expectation maximization program to be run on Amazon Elastic MapReduce.</p>
+      </header>
 
-          <h1 id="project_title">Distributed Expectation Maximization</h1>
-          <h2 id="project_tagline">A distributed expectation maximization program to be run on Amazon Elastic MapReduce.</h2>
+      <div id="banner">
+        <span id="logo"></span>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/jakeleichtling/dartmouth_distributed_em/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/jakeleichtling/dartmouth_distributed_em/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+        <a href="https://github.com/jakeleichtling/dartmouth_distributed_em" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/jakeleichtling/dartmouth_distributed_em/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/jakeleichtling/dartmouth_distributed_em/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>
+<a name="distributed-expectation-maximization" class="anchor" href="#distributed-expectation-maximization"><span class="octicon octicon-link"></span></a>Distributed Expectation Maximization</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>Jake Leichtling '14</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<p>Derek Salama '14</p>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>Computational Linguistics (COSC 73), Fall 2013</p>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<p>Professor Sravana Reddy</p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>The MapReduce directory contains the principle output of our project, i.e. a distributed expectation maximization
+program to estimate hidden markov model parameters. The source code can be found in the src directory, with corresponding
+documenation in the doc directory. The bin directory contains the program jar, which has been compiled from the source
+files linked with Hadoop version 2.2.0.</p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<hr><h2>
+<a name="compiling" class="anchor" href="#compiling"><span class="octicon octicon-link"></span></a>Compiling</h2>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>In order to compile the source files, the build path must contain the hadoop-common-.jar,
+hadoop-hdfs-.jar, and hadoop-mapreduce-client-core-.jar libraries, which we have included in the
+HadoopJars directory.</p>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<p>Please note that we have included a precompiled jar in the MapReduce/bin/ directory. You will only need to compile
+if you would like to make modifications.</p>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<hr><h2>
+<a name="running" class="anchor" href="#running"><span class="octicon octicon-link"></span></a>Running</h2>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<p>The current implementation of distributed EM must be run on an Amazon ElasticMapreduce (EMR) cluster with an Amazon S3
+distributed filesystem beneath it. The program jar, input corpora, and paramater seed files must be uploaded
+to the S3 filesystem prior to running.</p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>To run the jar, find a running EMR cluster or create a new one, and ensure that the cluster is using the Amazon Hadoop
+distribution marked as "latest" (this was "2.4.2 (Hadoop 1.0.3) - latest" during our development). Add a custom jar
+step and point it to the distributed EM jar (which can be found pre-compiled in the MapReduce/bin/ directory). 
+The arguments are described in the EMDriver.java javadoc, but are repeated here for conevenience:</p>
+
+<p>Arguments:</p>
+
+<p>0: Job name, e.g. "distributed-hmm-em"</p>
+
+<p>1: The bucket URI, e.g. "s3n://distributed-hmm-em/" for the file system</p>
+
+<p>2: Path to input directory containing emission sequences (one per line), e.g. "s3n://distributed-hmm-em/input"</p>
+
+<p>3: Path to output directory that does not yet exist, e.g. "s3n://distributed-hmm-em/output-13"</p>
+
+<p>4: Path to transitions file (each line of format "", with the first from_state
+being the symbol for the start of the emission sequence, e.g. "s3n://distributed-hmm-em/transitions.txt"</p>
+
+<p>5: Path to emissions file (each line of format "", e.g. "s3n://distributed-hmm-em/emissions.txt"</p>
+
+<p>6: Log convergence, i.e. difference between log alpha of EM iterations before final output is produced,
+e.g. "0.01"</p>
+
+<p>7: Max number of EM iterations, or -1 for no maximum, e.g. "10"</p>
+
+<p>8: Number of different random seeds for model parameters, e.g. "5"</p>
+
+<p>9: Flag to enable Viterbi tagging following EM, e.g. a nonzero int (e.g. "1" or "-1") to enable and "0" to disable</p>
+
+<hr><h2>
+<a name="documentation" class="anchor" href="#documentation"><span class="octicon octicon-link"></span></a>Documentation</h2>
+
+<p>The javadoc documentation for the source code can be found in the MapRedue/doc directory. This documentation can be
+opened for easy consumption by opening the index.html file in your favorite web browser.</p>
+
+<p>Additionally, our project writeup FinalWriteup.pdf is located in the root directory.</p>
+
+<hr><h2>
+<a name="conclusion" class="anchor" href="#conclusion"><span class="octicon octicon-link"></span></a>Conclusion</h2>
+
+<p>We hope you find this program useful for speeding up your expectation maximization endeavours! Please email us
+with any questions.</p>
+
+<p><a href="mailto:jake.leichtling@gmail.com">jake.leichtling@gmail.com</a></p>
+
+<p><a href="mailto:dereksalama@gmail.com">dereksalama@gmail.com</a></p>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Distributed Expectation Maximization maintained by <a href="https://github.com/jakeleichtling">jakeleichtling</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/jakeleichtling">jakeleichtling</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
       </footer>
     </div>
-
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
-
   </body>
 </html>
