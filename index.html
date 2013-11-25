@@ -1,44 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Distributed Expectation Maximization by jakeleichtling</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Distributed Expectation Maximization : A distributed expectation maximization program to be run on Amazon Elastic MapReduce." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Distributed Expectation Maximization</title>
   </head>
+
   <body>
 
-      <header>
-        <h1>Distributed Expectation Maximization</h1>
-        <p>A distributed expectation maximization program to be run on Amazon Elastic MapReduce.</p>
-      </header>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jakeleichtling/dartmouth_distributed_em">View on GitHub</a>
 
-      <div id="banner">
-        <span id="logo"></span>
+          <h1 id="project_title">Distributed Expectation Maximization</h1>
+          <h2 id="project_tagline">A distributed expectation maximization program to be run on Amazon Elastic MapReduce.</h2>
 
-        <a href="https://github.com/jakeleichtling/dartmouth_distributed_em" class="button fork"><strong>View On GitHub</strong></a>
-        <div class="downloads">
-          <span>Downloads:</span>
-          <ul>
-            <li><a href="https://github.com/jakeleichtling/dartmouth_distributed_em/zipball/master" class="button">ZIP</a></li>
-            <li><a href="https://github.com/jakeleichtling/dartmouth_distributed_em/tarball/master" class="button">TAR</a></li>
-          </ul>
-        </div>
-      </div><!-- end banner -->
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jakeleichtling/dartmouth_distributed_em/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jakeleichtling/dartmouth_distributed_em/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
 
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
-      <section>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>
 <a name="distributed-expectation-maximization" class="anchor" href="#distributed-expectation-maximization"><span class="octicon octicon-link"></span></a>Distributed Expectation Maximization</h1>
 
@@ -55,8 +47,8 @@ program to estimate hidden markov model parameters. The source code can be found
 documenation in the doc directory. The bin directory contains the program jar, which has been compiled from the source
 files linked with Hadoop version 2.2.0.</p>
 
-<h1>
-<a name="compiling" class="anchor" href="#compiling"><span class="octicon octicon-link"></span></a>Compiling</h1>
+<h2>
+<a name="compiling" class="anchor" href="#compiling"><span class="octicon octicon-link"></span></a>Compiling</h2>
 
 <p>In order to compile the source files, the build path must contain the hadoop-common-.jar,
 hadoop-hdfs-.jar, and hadoop-mapreduce-client-core-.jar libraries, which we have included in the
@@ -65,8 +57,8 @@ HadoopJars directory.</p>
 <p>Please note that we have included a precompiled jar in the MapReduce/bin/ directory. You will only need to compile
 if you would like to make modifications.</p>
 
-<h1>
-<a name="running" class="anchor" href="#running"><span class="octicon octicon-link"></span></a>Running</h1>
+<h2>
+<a name="running" class="anchor" href="#running"><span class="octicon octicon-link"></span></a>Running</h2>
 
 <p>The current implementation of distributed EM must be run on an Amazon ElasticMapreduce (EMR) cluster with an Amazon S3
 distributed filesystem beneath it. The program jar, input corpora, and paramater seed files must be uploaded
@@ -77,8 +69,8 @@ distribution marked as "latest" (this was "2.4.2 (Hadoop 1.0.3) - latest" during
 step and point it to the distributed EM jar (which can be found pre-compiled in the MapReduce/bin/ directory). 
 The arguments are described in the EMDriver.java javadoc, but are repeated here for conevenience:</p>
 
-<h2>
-<a name="arguments" class="anchor" href="#arguments"><span class="octicon octicon-link"></span></a>Arguments:</h2>
+<h3>
+<a name="arguments" class="anchor" href="#arguments"><span class="octicon octicon-link"></span></a>Arguments</h3>
 
 <p>0: Job name, e.g. "distributed-hmm-em"</p>
 
@@ -102,16 +94,17 @@ e.g. "0.01"</p>
 
 <p>9: Flag to enable Viterbi tagging following EM, e.g. a nonzero int (e.g. "1" or "-1") to enable and "0" to disable</p>
 
-<h1>
-<a name="documentation" class="anchor" href="#documentation"><span class="octicon octicon-link"></span></a>Documentation</h1>
+<h2>
+<a name="documentation" class="anchor" href="#documentation"><span class="octicon octicon-link"></span></a>Documentation</h2>
 
 <p>The javadoc documentation for the source code can be found in the MapRedue/doc directory. This documentation can be
-opened for easy consumption by opening the index.html file in your favorite web browser.</p>
+opened for easy consumption by opening the index.html file in your favorite web browser. Alternatively,
+just click <a href="doc/index.html">here :)</a>.</p>
 
 <p>Additionally, our project writeup FinalWriteup.pdf is located in the root directory.</p>
 
-<h1>
-<a name="conclusion" class="anchor" href="#conclusion"><span class="octicon octicon-link"></span></a>Conclusion</h1>
+<h2>
+<a name="conclusion" class="anchor" href="#conclusion"><span class="octicon octicon-link"></span></a>Conclusion</h2>
 
 <p>We hope you find this program useful for speeding up your expectation maximization endeavours! Please email us
 with any questions.</p>
@@ -120,12 +113,17 @@ with any questions.</p>
 
 <p><a href="mailto:dereksalama@gmail.com">dereksalama@gmail.com</a></p>
       </section>
-      <footer>
-        <p>Project maintained by <a href="https://github.com/jakeleichtling">jakeleichtling</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Distributed Expectation Maximization maintained by <a href="https://github.com/jakeleichtling">jakeleichtling</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
     
+
   </body>
 </html>
