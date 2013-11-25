@@ -14,9 +14,8 @@ program to estimate hidden markov model parameters. The source code can be found
 documenation in the doc directory. The bin directory contains the program jar, which has been compiled from the source
 files linked with Hadoop version 2.2.0.
 
-----------
-Compiling
-----------
+#Compiling#
+
 In order to compile the source files, the build path must contain the hadoop-common-<version>.jar,
 hadoop-hdfs-<version>.jar, and hadoop-mapreduce-client-core-<version>.jar libraries, which we have included in the
 HadoopJars directory.
