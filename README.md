@@ -1,5 +1,4 @@
-Distributed Expectation Maximization
-========================
+#Distributed Expectation Maximization#
 
 Jake Leichtling '14
 
@@ -14,7 +13,7 @@ program to estimate hidden markov model parameters. The source code can be found
 documenation in the doc directory. The bin directory contains the program jar, which has been compiled from the source
 files linked with Hadoop version 2.2.0.
 
-#Compiling#
+##Compiling##
 
 In order to compile the source files, the build path must contain the hadoop-common-<version>.jar,
 hadoop-hdfs-<version>.jar, and hadoop-mapreduce-client-core-<version>.jar libraries, which we have included in the
@@ -23,7 +22,7 @@ HadoopJars directory.
 Please note that we have included a precompiled jar in the MapReduce/bin/ directory. You will only need to compile
 if you would like to make modifications.
 
-#Running#
+##Running##
 
 The current implementation of distributed EM must be run on an Amazon ElasticMapreduce (EMR) cluster with an Amazon S3
 distributed filesystem beneath it. The program jar, input corpora, and paramater seed files must be uploaded
@@ -34,7 +33,7 @@ distribution marked as "latest" (this was "2.4.2 (Hadoop 1.0.3) - latest" during
 step and point it to the distributed EM jar (which can be found pre-compiled in the MapReduce/bin/ directory). 
 The arguments are described in the EMDriver.java javadoc, but are repeated here for conevenience:
 
-##Arguments:##
+###Arguments###
 
 0: Job name, e.g. "distributed-hmm-em"
 
@@ -58,14 +57,14 @@ e.g. "0.01"
 
 9: Flag to enable Viterbi tagging following EM, e.g. a nonzero int (e.g. "1" or "-1") to enable and "0" to disable
 
-#Documentation#
+##Documentation##
 
 The javadoc documentation for the source code can be found in the MapRedue/doc directory. This documentation can be
 opened for easy consumption by opening the index.html file in your favorite web browser.
 
 Additionally, our project writeup FinalWriteup.pdf is located in the root directory.
 
-#Conclusion#
+##Conclusion##
 
 We hope you find this program useful for speeding up your expectation maximization endeavours! Please email us
 with any questions.
