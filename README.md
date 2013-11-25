@@ -15,7 +15,7 @@ documenation in the doc directory. The bin directory contains the program jar, w
 files linked with Hadoop version 2.2.0.
 
 ----------------------------
-<a href="blob/master/MapReduce/doc/index.html">Documentation</a>
+<a href="MapReduce/doc/index.html">Documentation</a>
 ----------------------------
 
 ----------
