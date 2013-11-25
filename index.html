@@ -55,7 +55,7 @@ program to estimate hidden markov model parameters. The source code can be found
 documenation in the doc directory. The bin directory contains the program jar, which has been compiled from the source
 files linked with Hadoop version 2.2.0.</p>
 
-<hr><h2>
+<h2>
 <a name="compiling" class="anchor" href="#compiling"><span class="octicon octicon-link"></span></a>Compiling</h2>
 
 <p>In order to compile the source files, the build path must contain the hadoop-common-.jar,
@@ -65,7 +65,7 @@ HadoopJars directory.</p>
 <p>Please note that we have included a precompiled jar in the MapReduce/bin/ directory. You will only need to compile
 if you would like to make modifications.</p>
 
-<hr><h2>
+<h2>
 <a name="running" class="anchor" href="#running"><span class="octicon octicon-link"></span></a>Running</h2>
 
 <p>The current implementation of distributed EM must be run on an Amazon ElasticMapreduce (EMR) cluster with an Amazon S3
@@ -77,7 +77,8 @@ distribution marked as "latest" (this was "2.4.2 (Hadoop 1.0.3) - latest" during
 step and point it to the distributed EM jar (which can be found pre-compiled in the MapReduce/bin/ directory). 
 The arguments are described in the EMDriver.java javadoc, but are repeated here for conevenience:</p>
 
-<p>Arguments:</p>
+<h3>
+<a name="arguments" class="anchor" href="#arguments"><span class="octicon octicon-link"></span></a>Arguments</h3>
 
 <p>0: Job name, e.g. "distributed-hmm-em"</p>
 
@@ -101,15 +102,16 @@ e.g. "0.01"</p>
 
 <p>9: Flag to enable Viterbi tagging following EM, e.g. a nonzero int (e.g. "1" or "-1") to enable and "0" to disable</p>
 
-<hr><h2>
+<h2>
 <a name="documentation" class="anchor" href="#documentation"><span class="octicon octicon-link"></span></a>Documentation</h2>
 
 <p>The javadoc documentation for the source code can be found in the MapRedue/doc directory. This documentation can be
-opened for easy consumption by opening the index.html file in your favorite web browser.</p>
+opened for easy consumption by opening the index.html file in your favorite web browser. Alternatively,
+just click <a href="doc/index.html">here :)</a>.</p>
 
 <p>Additionally, our project writeup FinalWriteup.pdf is located in the root directory.</p>
 
-<hr><h2>
+<h2>
 <a name="conclusion" class="anchor" href="#conclusion"><span class="octicon octicon-link"></span></a>Conclusion</h2>
 
 <p>We hope you find this program useful for speeding up your expectation maximization endeavours! Please email us
