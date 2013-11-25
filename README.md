@@ -62,4 +62,5 @@ We hope you find this program useful for speeding up your expectation maximizati
 with any questions.
 
 jake.leichtling@gmail.com
+
 dereksalama@gmail.com
