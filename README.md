@@ -34,17 +34,27 @@ step and point it to the distributed EM jar. The arguments are described in the 
 here for conevenience:
 
 Arguments:
+
 0: Job name, e.g. "distributed-hmm-em"
+
 1: The bucket URI, e.g. "s3n://distributed-hmm-em/" for the file system
+
 2: Path to input directory containing emission sequences (one per line), e.g. "s3n://distributed-hmm-em/input"
+
 3: Path to output directory that does not yet exist, e.g. "s3n://distributed-hmm-em/output-13"
+
 4: Path to transitions file (each line of format "<from_state> <to_state>", with the first from_state
-     being the symbol for the start of the emission sequence, e.g. "s3n://distributed-hmm-em/transitions.txt"
+being the symbol for the start of the emission sequence, e.g. "s3n://distributed-hmm-em/transitions.txt"
+     
 5: Path to emissions file (each line of format "<state> <token>", e.g. "s3n://distributed-hmm-em/emissions.txt"
+
 6: Log convergence, i.e. difference between log alpha of EM iterations before final output is produced,
-     e.g. "0.01"
+e.g. "0.01"
+
 7: Max number of EM iterations, or -1 for no maximum, e.g. "10"
+
 8: Number of different random seeds for model parameters, e.g. "5"
+
 9: Flag to enable Viterbi tagging following EM, e.g. a nonzero int (e.g. "1" or "-1") to enable and "0" to disable
 
 --------------
